@@ -1,0 +1,115 @@
+<!-- about.html - About Us Page for Koru Impact -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koru Impact | About Us</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primaryBlue: '#2563EB',
+            primaryGreen: '#16A34A',
+            accentGold: '#FBBF24',
+            darkGray: '#1F2937',
+          },
+          fontFamily: {
+            heading: ['Lato', 'sans-serif'],
+            body: ['Libre Baskerville', 'serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    h1, h2, h3, h4, h5, h6 { font-family: 'Lato', sans-serif; }
+    body { font-family: 'Libre Baskerville', serif; }
+  </style>
+</head>
+<body class="bg-white text-darkGray min-h-screen flex flex-col">
+  <!-- Navigation Bar -->
+  <header class="bg-primaryBlue text-white">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-4 md:px-0">
+      <a href="index.html" class="text-2xl font-heading font-bold tracking-wide">Koru Impact</a>
+      <button id="nav-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+      <ul id="nav-menu" class="hidden md:flex space-x-8 font-heading text-lg">
+        <li><a href="index.html" class="hover:text-accentGold transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-accentGold transition">About Us</a></li>
+        <li><a href="services.html" class="hover:text-accentGold transition">Our Services</a></li>
+        <li><a href="contact.html" class="hover:text-accentGold transition">Contact</a></li>
+      </ul>
+    </nav>
+    <script>
+      // Mobile nav toggle
+      document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        navToggle.addEventListener('click', () => {
+          navMenu.classList.toggle('hidden');
+        });
+      });
+    </script>
+  </header>
+
+  <main class="flex-1">
+    <section class="container mx-auto px-4 py-16">
+      <h1 class="text-4xl md:text-5xl font-heading font-bold text-primaryBlue mb-6 text-center">About Koru Impact</h1>
+      <p class="text-lg md:text-xl max-w-3xl mx-auto mb-10 text-center">To serve as a catalyst for sustainable human and organizational flourishing by integrating evidence-based research, systemic empathy, and purpose-driven strategies that empower individuals, teams, and communities to thrive in a rapidly changing world.</p>
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <h2 class="text-2xl font-heading font-bold text-primaryGreen mb-4">Who We Are</h2>
+          <p class="mb-4">Koru Impact is a strategic consulting company dedicated to advancing well-being, learning, and social impact. Our work is grounded in three core values: <span class="font-bold text-primaryGreen">Evidence-Based Rigor</span>, <span class="font-bold text-accentGold">Systemic Empathy</span>, and <span class="font-bold text-primaryBlue">Purpose-Driven Impact</span>. We believe in the power of research, compassion, and purposeful action to create lasting change.</p>
+          <h3 class="text-xl font-heading font-bold text-primaryBlue mt-8 mb-2">Our Four Core Pillars</h3>
+          <ul class="list-disc list-inside space-y-2">
+            <li><span class="font-bold">Social Science Research:</span> Rigorous, evidence-based research to inform strategies for organizations and communities.</li>
+            <li><span class="font-bold">B2B Well-being & Psychological Services:</span> Tailored services to foster resilience, engagement, and holistic growth for teams and leaders.</li>
+            <li><span class="font-bold">Professional Education & Content Distribution:</span> Transformative learning experiences and high-impact content for professionals and organizations.</li>
+            <li><span class="font-bold">UN SDG & Social Impact Consulting:</span> Aligning strategies with the United Nations Sustainable Development Goals for maximum positive impact.</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-2xl font-heading font-bold text-accentGold mb-4">Founder: Şener Cem Irmak</h2>
+          <div class="bg-white rounded shadow p-6 border-l-4 border-primaryBlue">
+            <p class="mb-2"><span class="font-bold">Şener Cem Irmak</span> is a social scientist, educator, and consultant with a passion for fostering human flourishing and organizational transformation. With a background in psychology, education, and systems thinking, Cem has led research initiatives, designed well-being programs, and advised organizations on aligning with the UN Sustainable Development Goals. His approach blends scientific rigor with deep empathy and a commitment to meaningful, purpose-driven impact. Cem’s work is recognized for its integrative perspective, bridging research, practice, and policy to create sustainable change.</p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-16">
+        <h2 class="text-2xl font-heading font-bold text-primaryBlue mb-4 text-center">Our Values</h2>
+        <div class="flex flex-col md:flex-row gap-8 justify-center">
+          <div class="flex-1 bg-white rounded shadow p-6 border-l-4 border-primaryGreen">
+            <h3 class="font-heading text-lg font-bold mb-2">Evidence-Based Rigor</h3>
+            <p>We ground our work in the latest scientific research, ensuring every solution is robust, reliable, and impactful.</p>
+          </div>
+          <div class="flex-1 bg-white rounded shadow p-6 border-l-4 border-accentGold">
+            <h3 class="font-heading text-lg font-bold mb-2">Systemic Empathy</h3>
+            <p>We approach every challenge with deep understanding and compassion, considering the interconnectedness of people and systems.</p>
+          </div>
+          <div class="flex-1 bg-white rounded shadow p-6 border-l-4 border-primaryBlue">
+            <h3 class="font-heading text-lg font-bold mb-2">Purpose-Driven Impact</h3>
+            <p>We are committed to making a meaningful difference, guiding our clients toward sustainable, purpose-aligned success.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-darkGray text-white py-6 mt-8">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-2 md:mb-0">&copy; 2024 Koru Impact. All rights reserved.</div>
+      <div>
+        <a href="mailto:info@koruimpact.org" class="hover:text-accentGold transition">info@koruimpact.org</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html> 

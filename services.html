@@ -1,0 +1,99 @@
+<!-- services.html - Our Services Page for Koru Impact -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koru Impact | Our Services</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primaryBlue: '#2563EB',
+            primaryGreen: '#16A34A',
+            accentGold: '#FBBF24',
+            darkGray: '#1F2937',
+          },
+          fontFamily: {
+            heading: ['Lato', 'sans-serif'],
+            body: ['Libre Baskerville', 'serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    h1, h2, h3, h4, h5, h6 { font-family: 'Lato', sans-serif; }
+    body { font-family: 'Libre Baskerville', serif; }
+  </style>
+</head>
+<body class="bg-white text-darkGray min-h-screen flex flex-col">
+  <!-- Navigation Bar -->
+  <header class="bg-primaryBlue text-white">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-4 md:px-0">
+      <a href="index.html" class="text-2xl font-heading font-bold tracking-wide">Koru Impact</a>
+      <button id="nav-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+      <ul id="nav-menu" class="hidden md:flex space-x-8 font-heading text-lg">
+        <li><a href="index.html" class="hover:text-accentGold transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-accentGold transition">About Us</a></li>
+        <li><a href="services.html" class="hover:text-accentGold transition">Our Services</a></li>
+        <li><a href="contact.html" class="hover:text-accentGold transition">Contact</a></li>
+      </ul>
+    </nav>
+    <script>
+      // Mobile nav toggle
+      document.addEventListener('DOMContentLoaded', function() {
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        navToggle.addEventListener('click', () => {
+          navMenu.classList.toggle('hidden');
+        });
+      });
+    </script>
+  </header>
+
+  <main class="flex-1">
+    <section class="container mx-auto px-4 py-16">
+      <h1 class="text-4xl md:text-5xl font-heading font-bold text-primaryBlue mb-8 text-center">Our Services</h1>
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="bg-white rounded shadow p-8 border-t-4 border-primaryBlue">
+          <h2 class="text-2xl font-heading font-bold mb-2">Social Science Research</h2>
+          <p>We conduct rigorous, evidence-based research to inform strategies that drive meaningful change for organizations and communities. Our research services include needs assessments, program evaluations, and custom studies tailored to your unique context.</p>
+        </div>
+        <div class="bg-white rounded shadow p-8 border-t-4 border-primaryGreen">
+          <h2 class="text-2xl font-heading font-bold mb-2">B2B Well-being & Psychological Services</h2>
+          <p>Our tailored well-being and psychological services foster resilience, engagement, and holistic growth for teams and leaders. We offer workshops, coaching, and organizational well-being assessments to cultivate thriving workplaces.</p>
+        </div>
+        <div class="bg-white rounded shadow p-8 border-t-4 border-accentGold">
+          <h2 class="text-2xl font-heading font-bold mb-2">Professional Education & Content Distribution</h2>
+          <p>We deliver transformative learning experiences and distribute high-impact content to empower professionals and organizations. Our offerings include online courses, webinars, and resource libraries designed to inspire and educate.</p>
+        </div>
+        <div class="bg-white rounded shadow p-8 border-t-4 border-darkGray">
+          <h2 class="text-2xl font-heading font-bold mb-2">UN SDG & Social Impact Consulting</h2>
+          <p>We align strategies with the United Nations Sustainable Development Goals, maximizing positive social impact and organizational purpose. Our consulting services help organizations design, implement, and measure impact-driven initiatives.</p>
+        </div>
+      </div>
+      <div class="text-center mt-12">
+        <a href="contact.html" class="bg-primaryGreen text-white px-8 py-4 rounded font-heading font-bold text-lg hover:bg-accentGold hover:text-darkGray transition">Contact Us to Get Started</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-darkGray text-white py-6 mt-8">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-2 md:mb-0">&copy; 2024 Koru Impact. All rights reserved.</div>
+      <div>
+        <a href="mailto:info@koruimpact.org" class="hover:text-accentGold transition">info@koruimpact.org</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html> 
